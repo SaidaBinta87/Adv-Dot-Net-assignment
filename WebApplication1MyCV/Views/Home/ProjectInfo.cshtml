@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "ProjectInfo";
+}
+
+<h2>Project Information</h2>
+<style>
+    .cv-table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #000; 
+    }
+
+        .cv-table th, .cv-table td {
+            border: 1px solid #000; 
+            padding: 8px;
+            text-align: left;
+        }
+</style>
+
+<table class="cv-table">
+    <tr>
+        <th>Course</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Introduction to Programming</td>
+        <td>Automated ATM machine</td>
+        <td>An ATM machine for automatic transection od money.</td>
+    </tr>
+    <tr>
+        <td>Software Engineering</td>
+        <td>Automated Attendance System</td>
+        <td>A system to take automatic attendance.</td>
+    </tr>
+
+    <tr>
+        <td>OOP1</td>
+        <td>Covid-19 Vaccine Management System</td>
+        <td>A vaccination management system for covid-19. Allows everyone to register for covid-19 vaccine.</td>
+    </tr>
+    <tr>
+        <td>OOP2</td>
+        <td>Vaccination Management System</td>
+        <td>A vaccination management system for hospital. There are section for doctors, radiologis, patients and admin.</td>
+    </tr>
+    <tr>
+        <td>Web technology</td>
+        <td>Investor Seeker Website</td>
+        <td>A website to create an environment for investors and entrepreneurs.</td>
+    </tr>
+    <tr>
+        <td>Computer Graphics</td>
+        <td>Dynamic City View</td>
+        <td>A dynamic city view using C++ and opengl.</td>
+    </tr>
+    <tr>
+        <td>Machine Learning</td>
+        <td>Gastric Ulcer Detection Using Mchine Learning</td>
+        <td>Detection of gastric ulcer using machine learning approach.</td>
+    </tr>
+</table>
+
+<div class="footer">
+    <a href="@Url.Action("Index", "Home")">Home</a>
+    <a href="@Url.Action("Education", "Home")">Education</a>
+    <a href="@Url.Action("ProjectInfo", "Home")">ProjectInfo</a>
+    <a href="@Url.Action("Reference", "Home")">Reference</a>
+</div>
+

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Education";
+}
+
+<h2> @ViewBag.Message</h2>
+
+
+<ul>
+    <li>
+        <h3>HSC</h3>
+        <ul>
+            <li>Institute: Feni Government College</li>
+            <li>Year: 2019</li>
+            <li>Grade: A</li>
+            <li>Result: 4.75</li>
+        </ul>
+    </li>
+</ul>
+
+
+<ul>
+<li>
+    <h3>SSC</h3>
+    <ul>
+        <li>Institute: Feni Government Girls High School</li>
+        <li>Year: 2017</li>
+        <li>Grade: A+</li>
+        <li>Result: 5.00</li>
+    </ul>
+</li>
+</ul>
+
+
+
+<div class="footer">
+    <a href="@Url.Action("Index", "Home")">Home</a>
+    <a href="@Url.Action("Education", "Home")">Education</a>
+    <a href="@Url.Action("ProjectInfo", "Home")">ProjectInfo</a>
+    <a href="@Url.Action("Reference", "Home")">Reference</a>
+</div>

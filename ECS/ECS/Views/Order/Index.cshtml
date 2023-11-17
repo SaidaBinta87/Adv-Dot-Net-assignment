@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ECS.EF.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@if (TempData["Msg"] != null)
+{
+    <h3 class="alert text-center alert-success">@TempData["Msg"]</h3>
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Category1.Cname)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @item.Category
+            </td>
+            <td>
+                <a href="/Order/AddCart/@item.productID" class="btn btn-success">Add to Cart</a>
+            </td>
+        </tr>
+    }
+
+</table>
+<p class="text-center">
+    @for (int i = 1; i <= ViewBag.Pages; i++)
+    {
+        <a href="/Order/Index/@i" class="btn btn-danger">@i</a>
+    }
+</p>
+<p class="text-center">
+   
+        <a href="/Order/Cart" class="btn btn-danger"> Show Cart</a>
+    
+</p>
